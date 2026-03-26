@@ -23,7 +23,7 @@ export default function Education() {
         <div className="edu-details">
           <div className="edu-detail">
             <span className="edu-detail-icon">📊</span>
-            <span>GPA: 2.5 / 4.0</span>
+            <span>GPA: 2.8 / 4.0</span>
           </div>
           <div className="edu-detail">
             <span className="edu-detail-icon">📍</span>
