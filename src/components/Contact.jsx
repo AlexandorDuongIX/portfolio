@@ -1,33 +1,34 @@
 import { useState } from 'react';
 import { useLang } from '../context/LangContext';
+import { Mail, Phone, Briefcase, Github, Facebook, Send } from 'lucide-react';
 
 const contactLinks = [
   {
-    icon: '📧',
+    icon: <Mail size={24} />,
     titleKey: 'email',
     value: 'Trankhanhduongwangyuan1322@gmail.com',
     href: 'mailto:Trankhanhduongwangyuan1322@gmail.com',
   },
   {
-    icon: '📱',
+    icon: <Phone size={24} />,
     titleKey: 'phone',
     value: '0911 245 428',
     href: 'tel:0911245428',
   },
   {
-    icon: '💼',
+    icon: <Briefcase size={24} />,
     titleKey: 'LinkedIn',
     value: 'Trần Khánh Dương',
     href: 'https://linkedin.com/in/alexandors-duong-i-tran-khanh-duong-7a04a73a1',
   },
   {
-    icon: '🐙',
+    icon: <Github size={24} />,
     titleKey: 'GitHub',
     value: 'AlexandorDuongIX',
     href: 'https://github.com/AlexandorDuongIX',
   },
   {
-    icon: '📘',
+    icon: <Facebook size={24} />,
     titleKey: 'Facebook',
     value: 'Khánh Dương',
     href: 'https://www.facebook.com/ban.duong.kha.coc',
@@ -63,7 +64,7 @@ export default function Contact() {
 
       <div className="contact-content">
         <div className="contact-info reveal-left">
-          <h3>{t.contact.heading} 🚀</h3>
+          <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>{t.contact.heading} <Send size={24} color="var(--primary-color)" /></h3>
           <p>{t.contact.description}</p>
           <div className="contact-links">
             {contactLinks.map((link, i) => (
@@ -85,7 +86,7 @@ export default function Contact() {
         </div>
 
         <div className="contact-form glass-card reveal-right">
-          <h3>✉️ {t.contact.formTitle}</h3>
+          <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Mail size={24} color="var(--primary-color)" /> {t.contact.formTitle}</h3>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">{t.contact.name}</label>
@@ -119,8 +120,8 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn-submit">
-              {t.contact.send} 🚀
+            <button type="submit" className="btn-submit" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+              {t.contact.send} <Send size={18} />
             </button>
           </form>
         </div>

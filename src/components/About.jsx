@@ -1,13 +1,14 @@
 import { useLang } from '../context/LangContext';
+import { GraduationCap, Flame, Lightbulb, Zap } from 'lucide-react';
 
 export default function About() {
   const { t } = useLang();
 
   const highlights = [
-    { icon: '🎓', title: t.about.h1, desc: t.about.h1d },
-    { icon: '🔥', title: t.about.h2, desc: t.about.h2d },
-    { icon: '💡', title: t.about.h3, desc: t.about.h3d },
-    { icon: '⚡', title: t.about.h4, desc: t.about.h4d },
+    { icon: <GraduationCap size={28} className="highlight-lucide" />, title: t.about.h1, desc: t.about.h1d },
+    { icon: <Flame size={28} className="highlight-lucide" />, title: t.about.h2, desc: t.about.h2d },
+    { icon: <Lightbulb size={28} className="highlight-lucide" />, title: t.about.h3, desc: t.about.h3d },
+    { icon: <Zap size={28} className="highlight-lucide" />, title: t.about.h4, desc: t.about.h4d },
   ];
 
   return (

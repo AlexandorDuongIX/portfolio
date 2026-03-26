@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
+import { Sparkles, Mail, Rocket, FileText, User, Code2, Coffee } from 'lucide-react';
 
 const titles = ['Frontend Developer', 'React Developer', 'Software Engineering Student'];
 
@@ -39,7 +40,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-text">
           <p className="hero-greeting">
-            <span className="wave">👋</span> {'<'} {t.hero.greeting} {'/>'} 
+            <Sparkles className="hero-icon inline-icon" size={24} style={{ verticalAlign: 'middle', marginRight: '8px', color: 'var(--primary-color)' }} /> {'<'} {t.hero.greeting} {'/>'} 
           </p>
           <h1 className="hero-name">
             Trần Khánh{' '}
@@ -53,14 +54,14 @@ export default function Hero() {
             {t.hero.description}
           </p>
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">
-              ✉️ {t.hero.contact}
+            <a href="#contact" className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Mail size={18} /> {t.hero.contact}
             </a>
-            <a href="#projects" className="btn btn-outline">
-              🚀 {t.hero.viewProjects}
+            <a href="#projects" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Rocket size={18} /> {t.hero.viewProjects}
             </a>
-            <a href="/cv.pdf" download className="btn btn-outline">
-              📄 {t.hero.downloadCV}
+            <a href="/cv.pdf" download className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <FileText size={18} /> {t.hero.downloadCV}
             </a>
           </div>
           <div className="hero-stats">
@@ -80,13 +81,13 @@ export default function Hero() {
         </div>
 
         <div className="hero-image">
-          <div className="floating-badge">⚛️ React</div>
-          <div className="floating-badge">☕ Java</div>
-          <div className="floating-badge">🟨 JavaScript</div>
+          <div className="floating-badge" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Code2 size={16} /> React</div>
+          <div className="floating-badge" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Coffee size={16} /> Java</div>
+          <div className="floating-badge" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Code2 size={16} /> JavaScript</div>
           <div className="avatar-wrapper">
             <div className="avatar-ring"></div>
-            <div className="avatar-placeholder">
-              🧑‍💻
+            <div className="avatar-placeholder" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <User size={64} color="var(--primary-color)" />
             </div>
           </div>
         </div>

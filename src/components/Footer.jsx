@@ -1,13 +1,14 @@
 import { useLang } from '../context/LangContext';
+import { Github, Briefcase, Facebook, Heart } from 'lucide-react';
 
 const socials = [
-  { icon: '🐙', href: 'https://github.com/AlexandorDuongIX', label: 'GitHub' },
+  { icon: <Github size={20} />, href: 'https://github.com/AlexandorDuongIX', label: 'GitHub' },
   {
-    icon: '💼',
+    icon: <Briefcase size={20} />,
     href: 'https://linkedin.com/in/alexandors-duong-i-tran-khanh-duong-7a04a73a1',
     label: 'LinkedIn',
   },
-  { icon: '📘', href: 'https://www.facebook.com/ban.duong.kha.coc', label: 'Facebook' },
+  { icon: <Facebook size={20} />, href: 'https://www.facebook.com/ban.duong.kha.coc', label: 'Facebook' },
 ];
 
 export default function Footer() {
@@ -29,8 +30,8 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <p>
-        © 2026 Trần Khánh Dương. {t.footer.madeWith} <span className="heart">❤️</span> &
+      <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
+        © 2026 Trần Khánh Dương. {t.footer.madeWith} <Heart size={16} fill="var(--primary-color)" color="var(--primary-color)" className="heart" /> &
         React
       </p>
     </footer>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { useLang } from '../context/LangContext';
+import { Sun, Moon } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -66,18 +67,19 @@ export default function Navbar() {
 
           <div className="nav-actions">
             <button
-              className="nav-action-btn"
+              className="nav-action-btn text-btn"
               onClick={toggleLang}
               title={lang === 'vi' ? 'Switch to English' : 'Chuyển sang Tiếng Việt'}
+              style={{ fontWeight: 'bold', fontSize: '0.9rem' }}
             >
-              {lang === 'vi' ? '🇬🇧' : '🇻🇳'}
+              {lang === 'vi' ? 'EN' : 'VI'}
             </button>
             <button
               className="nav-action-btn"
               onClick={toggleTheme}
               title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
             >
-              {theme === 'dark' ? '☀️' : '🌙'}
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </button>
           </div>
         </div>
