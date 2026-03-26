@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLang } from '../context/LangContext';
-import { Mail, Phone, Briefcase, Github, Facebook, Send } from 'lucide-react';
+import { Mail, Phone, Send } from 'lucide-react';
+import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const contactLinks = [
   {
@@ -16,19 +17,19 @@ const contactLinks = [
     href: 'tel:0911245428',
   },
   {
-    icon: <Briefcase size={24} />,
+    icon: <FaLinkedin size={24} />,
     titleKey: 'LinkedIn',
     value: 'Trần Khánh Dương',
     href: 'https://linkedin.com/in/alexandors-duong-i-tran-khanh-duong-7a04a73a1',
   },
   {
-    icon: <Github size={24} />,
+    icon: <FaGithub size={24} />,
     titleKey: 'GitHub',
     value: 'AlexandorDuongIX',
     href: 'https://github.com/AlexandorDuongIX',
   },
   {
-    icon: <Facebook size={24} />,
+    icon: <FaFacebook size={24} />,
     titleKey: 'Facebook',
     value: 'Khánh Dương',
     href: 'https://www.facebook.com/ban.duong.kha.coc',

@@ -1,14 +1,15 @@
 import { useLang } from '../context/LangContext';
-import { Github, Briefcase, Facebook, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const socials = [
-  { icon: <Github size={20} />, href: 'https://github.com/AlexandorDuongIX', label: 'GitHub' },
+  { icon: <FaGithub size={20} />, href: 'https://github.com/AlexandorDuongIX', label: 'GitHub' },
   {
-    icon: <Briefcase size={20} />,
+    icon: <FaLinkedin size={20} />,
     href: 'https://linkedin.com/in/alexandors-duong-i-tran-khanh-duong-7a04a73a1',
     label: 'LinkedIn',
   },
-  { icon: <Facebook size={20} />, href: 'https://www.facebook.com/ban.duong.kha.coc', label: 'Facebook' },
+  { icon: <FaFacebook size={20} />, href: 'https://www.facebook.com/ban.duong.kha.coc', label: 'Facebook' },
 ];
 
 export default function Footer() {

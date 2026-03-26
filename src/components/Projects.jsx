@@ -1,5 +1,6 @@
 import { useLang } from '../context/LangContext';
-import { Bike, User, ExternalLink, Github } from 'lucide-react';
+import { Bike, User, ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 
 export default function Projects() {
   const { t } = useLang();
@@ -44,7 +45,7 @@ export default function Projects() {
                   <ExternalLink size={18} /> Live Demo
                 </a>
                 <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <Github size={18} /> GitHub
+                  <FaGithub size={18} /> GitHub
                 </a>
               </div>
             </div>
